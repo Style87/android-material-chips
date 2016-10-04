@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.milos192'
+group='com.github.Style87'
 
 ext {
     PUBLISH_GROUP_ID = 'com.furiousseraphim.chips'
