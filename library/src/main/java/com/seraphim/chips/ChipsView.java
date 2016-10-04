@@ -287,7 +287,7 @@ public class ChipsView extends ScrollView implements ChipsEditText.InputConnecti
     }
 
     public EditText getEditText() {
-        return mEditText;
+        return editText;
     }
 
     public void addSuggestions(List<ChipEntry> entries) {
