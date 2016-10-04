@@ -286,6 +286,10 @@ public class ChipsView extends ScrollView implements ChipsEditText.InputConnecti
         this.chipsValidator = chipsValidator;
     }
 
+    public EditText getEditText() {
+        return mEditText;
+    }
+
     public void addSuggestions(List<ChipEntry> entries) {
         editText.addSuggestions(entries);
     }
