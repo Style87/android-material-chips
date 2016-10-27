@@ -81,7 +81,7 @@ public class ChipsView extends ScrollView implements ChipsEditText.InputConnecti
     private ChipsEditText editText;
     private ChipsVerticalLinearLayout rootChipsLayout;
     private EditTextListener editTextListener;
-    private List<Chip> chipList = new ArrayList<>();
+    public List<Chip> chipList = new ArrayList<>();
     private Object currentEditTextSpan;
     private ChipValidator chipsValidator;
     private Mode mode = Mode.ALL;
