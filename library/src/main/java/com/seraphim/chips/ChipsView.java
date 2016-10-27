@@ -269,13 +269,18 @@ public class ChipsView extends ScrollView implements ChipsEditText.InputConnecti
     }
 
     public boolean removeChipBy(ChipEntry entry) {
-        for (int i = 0; i < chipList.size(); i++) {
-            if (chipList.get(i).mEntry != null && chipList.get(i).mEntry.equals(entry)) {
-                chipList.remove(i);
+        Iterator<ChipsView.Chip> iter = chipList.iterator();
+
+        while (iter.hasNext())
+        {
+            ChipsView.Chip chip = iter.next();
+            if (chip != null && chip.mEntry.equals(entry)) {
+                iter.remove();
                 onChipsChanged(true);
                 return true;
             }
         }
+
         return false;
     }
 
