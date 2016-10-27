@@ -37,6 +37,7 @@ import com.bumptech.glide.request.target.ImageViewTarget;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class ChipsView extends ScrollView implements ChipsEditText.InputConnectionWrapperInterface,
