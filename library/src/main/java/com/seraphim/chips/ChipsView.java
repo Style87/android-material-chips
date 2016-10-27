@@ -81,7 +81,7 @@ public class ChipsView extends ScrollView implements ChipsEditText.InputConnecti
     private ChipsEditText editText;
     private ChipsVerticalLinearLayout rootChipsLayout;
     private EditTextListener editTextListener;
-    public List<Chip> chipList = new ArrayList<>();
+    private List<Chip> chipList = new ArrayList<>();
     private Object currentEditTextSpan;
     private ChipValidator chipsValidator;
     private Mode mode = Mode.ALL;
@@ -283,6 +283,18 @@ public class ChipsView extends ScrollView implements ChipsEditText.InputConnecti
         }
 
         return false;
+    }
+
+    public boolean clear() {
+        Iterator<ChipsView.Chip> iter = chipList.iterator();
+
+        while (iter.hasNext())
+        {
+            ChipsView.Chip chip = iter.next();
+            iter.remove();
+        }
+        onChipsChanged(true);
+        return true;
     }
 
     public void setChipsListener(ChipsListener chipsListener) {
